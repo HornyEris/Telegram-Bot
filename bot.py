@@ -24,4 +24,4 @@ def all_else(message):
     bot.send_message(message.chat.id, "⚠️ ကျေးဇူးပြုပြီး Sticker ကိုသုံးပြီး Post Link ကိုရယူပါ။")
 
 print("🤖 Bot is running...")
-bot.pulling()
+bot.polling()
