@@ -25,8 +25,8 @@ def handle_sticker(message):
     else:
         bot.send_message(message.chat.id, "😕 ဒီStickerကိုမသိပါ။")
 
-@bot.message_handler(func=lambda m: True)
-def all_else(message):
+@bot.message_handler(func=lambda message: True)
+def handle_other(message):
     bot.send_message(message.chat.id, "⚠️ ကျေးဇူးပြုပြီး Sticker ကိုသုံးပြီး Post Link ကိုရယူပါ။")
 
 print("🤖 Bot is running...")
