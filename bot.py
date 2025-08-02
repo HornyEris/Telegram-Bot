@@ -7,6 +7,11 @@ sticker_links = {
     "AgAD5RcAAs5ucFQ": "https://t.me/btodarkside/267"
 }
 
+@bot.message_handler(content_types=['sticker'])
+def handle_sticker(message):
+    file_id = message.sticker.file_unique_id
+    print("Sticker ID:", file_id)
+
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
     bot.reply_to(message, "👋 Beyond The Oblivion Translation Team မှကြိုဆိုပါတယ်!\n\nကျေးဇူးပြုပြီး Sticker Set ကိုအရင်အသုံးပြုပေးပါ။\n👉 https://t.me/addstickers/BTO_Darkside")
@@ -15,7 +20,7 @@ def send_welcome(message):
 def handle_sticker(message):
     sticker_id = message.sticker.file_id
     if sticker_id in sticker_links:
-        bot.send_message(message.chat.id, sticker_responses[sticker_id])
+        bot.send_message(message.chat.id, sticker_links[sticker_id])
     else:
         bot.send_message(message.chat.id, "😕 ဒီStickerကိုမသိပါ။")
 
