@@ -1,10 +1,9 @@
 import telebot
 
 BOT_TOKEN = "8384058819:AAFVwPsIgToc9IW0Wv655fsCO6rdsZChyuE"
-
 bot = telebot.TeleBot(BOT_TOKEN)
 
-sticker_responses = {
+sticker_links = {
     "AgAD5RcAAs5ucFQ": "https://t.me/btodarkside/267"
 }
 
@@ -23,3 +22,6 @@ def handle_sticker(message):
 @bot.message_handler(func=lambda m: True)
 def all_else(message):
     bot.send_message(message.chat.id, "⚠️ ကျေးဇူးပြုပြီး Sticker ကိုသုံးပြီး Post Link ကိုရယူပါ။")
+
+print("🤖 Bot is running...")
+bot.pulling()
