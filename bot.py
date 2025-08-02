@@ -5,6 +5,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 sticker_links = {
     "AgAD5RcAAs5ucFQ": "https://t.me/btodarkside/267"
+    "AgADgBsAAqvacVQ": "https://t.me/btodarkside/250"
 }
 
 @bot.message_handler(content_types=['sticker'])
