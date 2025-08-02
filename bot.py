@@ -4,7 +4,7 @@ BOT_TOKEN = "8384058819:AAGTXt-cWULO5MDZEfCyuVksm3txrTkThDA"
 bot = telebot.TeleBot(BOT_TOKEN)
 
 sticker_links = {
-    "AgAD5RcAAs5ucFQ": "https://t.me/btodarkside/267"
+    "AgAD5RcAAs5ucFQ": "https://t.me/btodarkside/267",
     "AgADgBsAAqvacVQ": "https://t.me/btodarkside/250"
 }
 
