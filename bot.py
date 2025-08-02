@@ -1,6 +1,7 @@
 import telebot
 
-BOT_TOKEN = "8384058819:AAFVwPsIgToc9IW0Wv655fsCO6rdsZChyuE"
+BOT_TOKEN = "8384058819:AAGTXt-cWULO5MDZEfCyuVksm3txrTkThDA"
+
 bot = telebot.TeleBot(BOT_TOKEN)
 
 sticker_links = {
@@ -20,7 +21,7 @@ def send_welcome(message):
 def handle_sticker(message):
     sticker_id = message.sticker.file_id
     if sticker_id in sticker_links:
-        bot.send_message(message.chat.id, sticker_links[sticker_id])
+        bot.send_message(message.chat.id, "သင်ကြည့်ရှုလိုသော Hentai Link ရပါပြီ🤝:{sticker_links[file_id]}")
     else:
         bot.send_message(message.chat.id, "😕 ဒီStickerကိုမသိပါ။")
 
