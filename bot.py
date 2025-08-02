@@ -21,7 +21,7 @@ def send_welcome(message):
 def handle_sticker(message):
     sticker_id = message.sticker.file_id
     if sticker_id in sticker_links:
-        bot.send_message(message.chat.id, "သင်ကြည့်ရှုလိုသော Hentai Link ရပါပြီ🤝:{sticker_links[file_id]}")
+        bot.send_message(message.chat.id, f"🔗သင်ကြည့်ရှုလိုသော Hentai Link ရပါပြီ🤝:{sticker_links[file_id]}")
     else:
         bot.send_message(message.chat.id, "😕 ဒီStickerကိုမသိပါ။")
 
