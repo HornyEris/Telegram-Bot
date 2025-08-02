@@ -14,7 +14,7 @@ def send_welcome(message):
 @bot.message_handler(content_types=['sticker'])
 def handle_sticker(message):
     sticker_id = message.sticker.file_id
-    if sticker_id in sticker_responses:
+    if sticker_id in sticker_links:
         bot.send_message(message.chat.id, sticker_responses[sticker_id])
     else:
         bot.send_message(message.chat.id, "😕 ဒီStickerကိုမသိပါ။")
